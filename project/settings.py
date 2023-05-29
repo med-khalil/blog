@@ -48,21 +48,19 @@ INSTALLED_APPS = [
 
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 CKEDITOR_IMAGE_BACKEND = "pillow"
-CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js' 
+CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
 
 CKEDITOR_CONFIGS = {
-    'default':
-        {
-            'toolbar': 'full',
-            'width': 'auto',
-
-            'mathJaxLib' : 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML',
-
-            'extraPlugins': ','.join([
+    'default': {
+        'toolbar': 'full',
+        'width': 'auto',
+        'mathJaxLib': 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML',
+        'extraPlugins': ','.join(
+            [
                 'codesnippet',
                 'mathjax',
             ]),
-        },
+    },
 }
 
 MIDDLEWARE = [
@@ -102,8 +100,8 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),    
-        }
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
 
 

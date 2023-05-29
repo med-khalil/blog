@@ -14,6 +14,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='article',
             name='body',
-            field=ckeditor.fields.RichTextField(verbose_name='Article content'),
+            field=ckeditor.fields.RichTextField(
+                verbose_name='Article content'),
         ),
     ]

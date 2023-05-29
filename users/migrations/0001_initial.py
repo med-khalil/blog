@@ -19,11 +19,34 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Profile',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('first_name', models.CharField(blank=True, default=None, max_length=100, null=True)),
-                ('last_name', models.CharField(blank=True, default=None, max_length=100, null=True)),
-                ('avatar', models.ImageField(default='profile/default.png', max_length=10000, storage=users.storage.OverwriteStorage(), upload_to=users.models.image_rename)),
-                ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                ('id',
+                 models.BigAutoField(
+                     auto_created=True,
+                     primary_key=True,
+                     serialize=False,
+                     verbose_name='ID')),
+                ('first_name',
+                 models.CharField(
+                     blank=True,
+                     default=None,
+                     max_length=100,
+                     null=True)),
+                ('last_name',
+                 models.CharField(
+                     blank=True,
+                     default=None,
+                     max_length=100,
+                     null=True)),
+                ('avatar',
+                 models.ImageField(
+                     default='profile/default.png',
+                     max_length=10000,
+                     storage=users.storage.OverwriteStorage(),
+                     upload_to=users.models.image_rename)),
+                ('user',
+                 models.OneToOneField(
+                     on_delete=django.db.models.deletion.CASCADE,
+                     to=settings.AUTH_USER_MODEL)),
             ],
         ),
     ]

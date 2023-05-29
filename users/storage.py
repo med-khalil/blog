@@ -1,9 +1,8 @@
 from django.core.files.storage import FileSystemStorage
-from django.conf import settings
-import os
+
 
 class OverwriteStorage(FileSystemStorage):
-    
+
     def _save(self, name, content):
         if self.exists(name):
             self.delete(name)

@@ -4,6 +4,7 @@ from ckeditor.fields import RichTextField
 from users.models import User
 from django.urls import reverse
 
+
 class Article(models.Model):
     title = models.CharField(
         _("Article title"), max_length=250,
@@ -20,6 +21,6 @@ class Article(models.Model):
 
     def __str__(self):
         return self.title
-    
+
     def get_absolute_url(self):
         return reverse('article_detail', args=[str(self.id)])

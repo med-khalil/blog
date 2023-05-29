@@ -2,9 +2,9 @@ from django.test import TestCase
 
 from blog.models import Article
 from users.models import User
-from django.urls import reverse
 
-# test Article functionality : 
+
+# test Article functionality :
 class ArticleTestCase(TestCase):
     def setUp(self):
         self.user = User.objects.create(username='testuser')

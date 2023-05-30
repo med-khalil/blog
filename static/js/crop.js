@@ -71,8 +71,10 @@ function updateCropArea(event) {
     const rect = el.getBoundingClientRect();
     let deltaX, deltaY, delta;
     if (event instanceof KeyboardEvent) {
-        if (event.key === 'Escape')
-            return setInitialPosition(el);
+        if (event.key === 'Escape') {
+            setInitialPosition(el);
+            return;
+        }
         if (event.key === '-')
             delta = -10;
         if (event.key === '=')

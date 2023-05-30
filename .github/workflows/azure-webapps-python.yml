@@ -74,16 +74,11 @@ jobs:
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
-      - name: Azure login
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-        
       - name: Download artifact from build job
         uses: actions/download-artifact@v3
         with:
           name: python-app
-          path: .  
+          path: .
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp

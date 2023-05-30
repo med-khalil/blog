@@ -5,6 +5,7 @@ import sys
 
 
 def main():
+    print("starting manage.py in main")
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project.settings')
     try:

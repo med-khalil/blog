@@ -1,4 +1,4 @@
-Django
+Django==4.2.1
 whitenoise
 asgiref==3.6.0
 django-ckeditor==6.0.0
@@ -6,3 +6,4 @@ pillow==9.5.0
 sqlparse==0.4.4
 tzdata==2023.3
 flake8==6.0.0
+python-decouple==3.8

@@ -1,4 +1,4 @@
-Django==4.2.1
+Django==4.2.3
 whitenoise
 asgiref==3.6.0
 django-ckeditor==6.0.0

@@ -3,7 +3,7 @@ whitenoise
 asgiref==3.6.0
 django-ckeditor==6.0.0
 pillow==9.5.0
-sqlparse==0.4.4
+sqlparse==0.5.0
 tzdata==2023.3
 flake8==6.0.0
 python-decouple==3.8
